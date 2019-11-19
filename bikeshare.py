@@ -20,12 +20,13 @@ def get_filters():
     city = input("\nWhat city do you intend to filter by? New York City, Chicago, Washington or all?\n").lower()
     ### The following checks will ensure that the user inputs one of the expected cities.
     while(True):
-        if city not in('chicago', 'new york city', 'washington', 'all'):
-            city = input('Please enter a city from the option provided\n').lower()
-            continue
-        else: 
-            print('You have chosen to filter by {}'.format(city))
+        if city in('chicago', 'new york city', 'washington', 'all'):
+			print('You have chosen to filter by {}'.format(city))
             break
+           
+        else: 
+			city = input('Please enter a city from the option provided\n').lower()
+            continue
     # TO DO: get user input for month (all, january, february, ... , june)
     month = input('\nWhich of the following months will you want to filter by? January, February, March, April, May, or June?\n').lower()
     
